@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dressing Suit Cloth Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo">Dressing Sense</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Dresses</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Dressing Suit Cloth Portfolio</h1>
+        <p>Welcome to our stunning collection of dresses and suits</p>
+        <a href="#" class="btn">Contact Us <i class="fas fa-phone"></i></a>
+    </section>
+
+    <section class="dresses-container">
+        <h2>Our Dresses</h2>
+        <div class="row">
+            <div class="dress-col">
+                <img src="./images//pexels-bruno-salvadori-1755428.jpg">
+                <div class="dress-price">
+                    <h3>Red Dress</h3>
+                    <p>$99.99</p>
+
+                </div>
+            </div>
+            <div class="dress-col">
+                <img src="./images//pexels-photomix-company-291759.jpg">
+                <div class="dress-price">
+                <h3>Black Dress</h3>
+                <p>$89.99</p>
+                </div>
+            </div>
+            <div class="dress-col">
+                <img src="./images//pexels-tuấn-kiệt-jr-1308885.jpg">
+                <div class="dress-price">
+                <h3>Blue Dress</h3>
+                <p>$79.99</p>
+                </div>
+            </div>
+            <div class="dress-col">
+                <img src="./images/pexels-tuấn-kiệt-jr-1308885.jpg">
+                <div class="dress-price">
+
+                <h3>White Dress</h3>
+                <p>$69.99</p></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="dress-col">
+                <img src="./images/pexels-henry-&-co-1233648.jpg">
+                <div class="dress-price">
+                <h3>Pink Dress</h3>
+                <p>$59.99</p>
+                </div>
+            </div>
+            <div class="dress-col">
+                <img src="./images/pexels-photomix-company-291759.jpg">
+                <div class="dress-price">
+                <h3>Green Dress</h3>
+                <p>$49.99</p>
+                </div>
+            </div>
+            <div class="dress-col">
+                <img src="./images/pexels-снежана-2173357.jpg">
+                <div class="dress-price">
+                <h3>Yellow Dress</h3>
+                <p>$39.99</p>
+                </div>
+            </div>
+            <div class="dress-col">
+                <img src="./images/pexels-photomix-company-291759.jpg">
+                <div class="dress-price">
+                <h3>Orange Dress</h3>
+                <p>$29.99</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="row">
+            <div class="about-img">
+                <img src="./images/pexels-bruno-salvadori-1755428.jpg">
+            </div>
+            <div class="about-col">
+                <h2>About Us</h2>
+                <p>We are a leading supplier of high-quality dresses and suits. Our collection is designed to make you look and feel amazing on any occasion. We pride ourselves on our excellent customer service and attention to
+detail. Contact us today to experience the best in fashion.</p>
+<a href="#" class="btn">Learn More</a>
+</div>
+</div>
+</section>
+<footer>
+    <div class="footer">
+        <h3>Suit Cloth Portfolio</h3>
+        <p>Follow us on social media</p>
+        <ul class="socials">
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer">
+        <p>&copy; 2023 Suit Cloth Portfolio | Designed by Your Name</p>
+    </div>
+</footer>
+</body>
+<script>
+    const burger = document.querySelector(".burger");
+const navLinks = document.querySelector(".nav-links");
+const navLinksLi = document.querySelectorAll(".nav-links li");
+
+burger.addEventListener("click", () => {
+    navLinks.classList.toggle("nav-active");
+
+    navLinksLi.forEach((link, index) => {
+        if(link.style.animation){
+            link.style.animation = "";
+        }else{
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+        }
+    });
+
+    burger.classList.toggle("toggle");
+});
+
+</script>
+</html>
